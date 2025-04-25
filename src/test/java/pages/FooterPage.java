@@ -1,7 +1,8 @@
 package pages;
 
 import com.aventstack.extentreports.ExtentTest;
-import runner.AppTest;
+
+import runner.App;
 import uistore.FooterLocators;
 import utils.Base;
 import utils.Reporter;
@@ -12,7 +13,7 @@ import utils.WebDriverHelper;
 
 public class FooterPage {
     private WebDriverHelper webDriverHelper;
-    public ExtentTest test = AppTest.test;
+    public ExtentTest test = App.test;
     Reporter reporter;
     FooterLocators footerLocators;
     Screenshot screenshotHelper;

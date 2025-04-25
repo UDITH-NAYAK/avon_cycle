@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
@@ -87,12 +88,43 @@ public class Base {
 
         }
 
- 
+    }
+
+    public void openChromeBrowser() {
+
+   
+        driver = new ChromeDriver();
+
+        if (driver != null)
+
+        {
+            
+            driver.manage().window().maximize();
+            driver.get("https://avoncycles.com/");
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+        }
 
     }
 
-    public void closing(){
+    public void openFireFoxBrowser() {
+ 
+        driver = new FirefoxDriver();
+       
+ 
+        if (driver != null)
+        {
+            driver.manage().window().maximize();
+            driver.get("https://avoncycles.com/");
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+        }
+
+        
+    }
+    public void closing() {
         driver.quit();
     }
-    
 }

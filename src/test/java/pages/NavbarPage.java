@@ -1,7 +1,8 @@
 package pages;
 
 import com.aventstack.extentreports.ExtentTest;
-import runner.AppTest;
+
+import runner.App;
 import uistore.NavbarLocators;
 import utils.Base;
 import utils.Reporter;
@@ -10,7 +11,7 @@ import utils.WebDriverHelper;
 
 public class NavbarPage {
     private WebDriverHelper webDriverHelper;
-    public ExtentTest test = AppTest.test;
+    public ExtentTest test = App.test;
     Reporter reporter;
     NavbarLocators navbarLocators;
     Screenshot screenshotHelper;

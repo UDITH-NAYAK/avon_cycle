@@ -1,7 +1,8 @@
 package pages;
 
 import com.aventstack.extentreports.ExtentTest;
-import runner.AppTest;
+
+import runner.App;
 import uistore.HomePageLocators;
 import uistore.NavbarLocators;
 import uistore.ProductsLocators;
@@ -12,7 +13,7 @@ import utils.WebDriverHelper;
 
 public class ProductsPage {
     private WebDriverHelper webDriverHelper;
-    public ExtentTest test = AppTest.test;
+    public ExtentTest test = App.test;
     Reporter reporter;
     ProductsLocators productsLocators;
     Screenshot screenshotHelper;
